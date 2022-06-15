@@ -16,14 +16,7 @@ body{
    
     
 }
-#modal{
-    padding: 30px;
-    background: white;
-    border-radius: 4px;
-    box-shadow: 1 4px rgba(0,0,0,.1);
-    max-width: 400px;
-    margin: 20px auto;
-}
+
 #modal h1{
     font-family: sans-serif;
     margin: 0px 0px 20px;
@@ -52,4 +45,60 @@ body{
     background: #ffb801;
     color: #402d00;
 
+}
+#modal{
+    padding: 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 1px rgba(0,0,0,.1);
+    max-width: 400px;
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+#modal.animar{
+    animation-name: slide;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    /*animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-iteration-count: 1;*/
+    
+
+}
+@keyframes slide{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+}
+#load{
+    width: 40px;
+    height: 40px;
+    border: 10px solid;
+    border-radius: 100%;
+    border-top-color:transparent;
+    margin: 0 auto;
+    animation: spin 2s infinite;
+    color:#ffb801
+    
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
+/**@keyframes loads {
+    0%{
+        transform: translate(0px); scale(.spx)
+    }
+    
 }
